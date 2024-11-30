@@ -1,0 +1,37 @@
+# Assistente Conversacional baseado em PDFs
+
+Este projeto implementa um assistente conversacional que responde a perguntas com base em informações extraídas de PDFs carregados pelo usuário.  O projeto utiliza técnicas de processamento de linguagem natural (PNL) e aprendizado de máquina (ML) para entender as perguntas e fornecer respostas relevantes.
+
+## Base de Conhecimento
+
+Este código foi desenvolvido com base nos materiais de apoio fornecidos e em materiais complementares da internet, principalmente dos canais do YouTube "Krish Naik" e "Alejandro AO - Software & Ai".  Agradecimentos especiais a esses criadores de conteúdo por seus tutoriais e insights.
+
+## Funcionalidades
+
+* **Carregamento de PDFs:** Permite o upload de múltiplos arquivos PDF.
+* **Processamento de Texto:** Extrai o texto dos PDFs e o divide em pedaços menores para otimizar o processamento.
+* **Indexação Vetorial:** Cria um índice vetorial usando FAISS e embeddings do Google Generative AI para busca eficiente por similaridade.
+* **Cadeia de Perguntas e Respostas:** Utiliza Langchain e o modelo Gemini Pro do Google Generative AI para gerar respostas contextuais às perguntas do usuário.
+* **Interface Streamlit:** Interface web interativa para interagir com o assistente.
+
+## Instalação
+
+1. **Crie um ambiente virtual (recomendado):**
+
+```bash
+conda create -p venv python==3.10
+conda activate venv/
+```
+
+2. **Crie um arquivo .env na raiz do projeto e adicione sua chave de API do Google:**
+
+GOOGLE_API_KEY=SUA_CHAVE_DE_API_AQUI
+
+3. **Instale as dependências:**
+
+pip install -r requirements.txt
+pip install -U langchain-community
+
+4. **Execução**
+
+streamlit run app.py  # Substitua 'app.py' pelo nome do seu arquivo Python principal
